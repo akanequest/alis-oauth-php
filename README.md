@@ -1,5 +1,6 @@
 # alis-oauth-php
 ALISのOAuth認証をPHPで行うサンプルです。
+アクセストークンが失効した場合に再取得する処理は今のところありません。
 
 ALIS公式の利用ガイドラインはこちら
 https://alisproject.github.io/oauth2/term/
@@ -10,3 +11,11 @@ https://alisproject.github.io/oauth2/term/
   <li>keys.phpにClientIDなどを記入する<br/>リダイレクトURIにはcallback.phpを指定すること（アプリケーションの設定と合わせる必要あり）</li>
   <li>sample.phpをブラウザで表示する</li>
 </ol>
+
+現在このサンプルでは、次の情報をセッションに保存します。
+<ul>
+  <li>code_verifier（同意画面に遷移する際に必要なもの）</li>
+  <li>許可コード（リダイレクト時に受け取る）</li>
+  <li>アクセストークン（各種APIを使用する時に必要）</li>
+  <li>ALISのユーザーID</li>
+</ul>
