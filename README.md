@@ -6,7 +6,7 @@ https://alisproject.github.io/oauth2/term/
 
 使い方
 <ol>
-  <li>ALISで<a href="https://alis.to/me/settings/applications">アプリケーション登録</a>を行う</li>
-  <li>keys.phpにClientIDなどを記入する</li>
+  <li>ALISで<a href="https://alis.to/me/settings/applications">アプリケーション登録</a>を行う<br/>内容は後から変更できるので最初は適当でOK</li>
+  <li>keys.phpにClientIDなどを記入する<br/>リダイレクトURIにはcallback.phpを指定すること（アプリケーションの設定と合わせる必要あり）</li>
   <li>sample.phpをブラウザで表示する</li>
 </ol>
