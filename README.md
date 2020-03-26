@@ -2,8 +2,8 @@
 ALISのOAuth認証をPHPで行うサンプルです。<br/>
 アクセストークンが失効した場合に再取得する処理は今のところありません。<br/>
 <br/>
-ALIS公式の利用ガイドラインはこちら
-https://alisproject.github.io/oauth2/term/
+ALIS公式の利用ガイドラインはこちら<br/>
+https://alisproject.github.io/oauth2/term/<br/>
 <br/>
 使い方
 <ol>
