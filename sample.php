@@ -8,7 +8,15 @@ $keys = require('keys.php');
 
 //セッションが残っているか？
 if (array_key_exists($keys['index']['token'],$_SESSION)){
-    $name = $_SESSION[$keys['index']['user-id']];
+    require('./alis-api.php');
+
+    $meinfo = api_me_info();
+    if ($meinfo != null){
+        $name = $meinfo['user_display_name'];
+    }
+}
+
+if (isset($name)){
     $result = <<<TEXT
 <p>{$name} でログイン中</p>
 <form action="logout.php" method="post" enctype="multipart/form-data">
