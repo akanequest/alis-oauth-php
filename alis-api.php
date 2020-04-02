@@ -63,10 +63,10 @@ function getToken_andSet(){
     $arr = json_decode($json,true);
     if (array_key_exists('access_token',$arr) == false){
         error_oauth();
+    }else{
+        $_SESSION[$keys['index']['token']] = $arr['access_token'];
+        $_SESSION[$keys['index']['rtoken']] = $arr['refresh_token'];
     }
-
-    $_SESSION[$keys['index']['token']] = $arr['access_token'];
-    $_SESSION[$keys['index']['rtoken']] = $arr['refresh_token'];
 }
 //リフレッシュトークンを使用してアクセストークンを再取得する
 function updateToken(){
@@ -82,7 +82,7 @@ function updateToken(){
 
     $arr = json_decode($json,true);
     if (array_key_exists('access_token',$arr) == false){
-        error_oauth();
+        //error_oauth();
         return false;
     }
     $_SESSION[$keys['index']['token']] = $arr['access_token'];
